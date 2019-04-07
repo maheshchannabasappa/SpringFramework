@@ -8,4 +8,11 @@
 	<bean id="springioc"
 		class="com.dreamworks.SpringExample1.SpringIOC">
 	</bean>
+	
+	
+	<bean id="setterinjection"
+		class="com.dreamworks.SpringDI.DISetterInjection">
+		<property name="message" value="Spring Dependency Injection - Setter Injection"></property>
+	</bean>
+	
 </beans>
