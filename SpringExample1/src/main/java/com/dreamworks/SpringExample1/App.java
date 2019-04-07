@@ -1,13 +1,18 @@
 package com.dreamworks.SpringExample1;
 
-/**
- * Hello world!
- *
- */
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("Bean.xml");
+        
+        SpringIOC ioc = context.getBean(SpringIOC.class);
+        
+        ioc.display();
+        
+        context.close();
     }
 }
+
